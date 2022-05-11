@@ -1,5 +1,89 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background: #3494E6;
+    background: -webkit-linear-gradient(to bottom, #EC6EAD, #3494E6);
+    background: linear-gradient(to bottom, #EC6EAD, #3494E6);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100%;
+}
+
+h1 {
+    font-weight: 300;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.contenido {
+    background-color: rgba(255, 255, 255, 0.589);
+    max-width: 100rem;
+    margin: 1rem auto;
+    height: 100%;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.formulario-busqueda p {
+    text-align: center;
+}
+
+.formulario-busqueda span {
+    color: red;
+}
+
+.input {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.input label {
+    flex: 0 0 120px;
+    text-align: right;
+    margin-right: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.input span {
+    color: red;
+}
+
+.input input[type="text"] {
+    height: 2.5rem;
+    padding: 1rem;
+    display: flex;
+    flex: 1;
+    border: solid 1px #3494E6;
+    border-radius: 10px;
+}
+
+.enviar {
+    text-align: right;
+    justify-content: flex-end !important;
+}
+
+.input input[type="submit"] {
+    background-color: #3494E6;
+    padding: .5rem 2rem;
+    color: white;
+    align-self: flex-end;
+    border: none;
+    transition: background-color .3s ease-in-out;
+}
+
+.input input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #3494E6;
 }
