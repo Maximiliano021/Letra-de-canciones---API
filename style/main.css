@@ -13,7 +13,9 @@ body {
     background: -webkit-linear-gradient(to bottom, #EC6EAD, #3494E6);
     background: linear-gradient(to bottom, #EC6EAD, #3494E6);
     font-family: 'Montserrat', sans-serif;
-    min-height: 100%;
+    min-height: 80%;
+    width: 80%;
+    margin: 0 auto;
 }
 
 h1 {
@@ -31,8 +33,9 @@ h2 {
     margin: 1rem auto;
     height: 100%;
     padding: 20px;
-    border-radius: 4px;
+    border-radius: 5px;
 }
+
 
 .formulario-busqueda p {
     text-align: center;
@@ -66,12 +69,16 @@ h2 {
     display: flex;
     flex: 1;
     border: solid 1px #3494E6;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .enviar {
     text-align: right;
     justify-content: flex-end !important;
+}
+
+#formulario-buscar{
+    padding-top: 1rem;
 }
 
 .input input[type="submit"] {
@@ -86,4 +93,26 @@ h2 {
 .input input[type="submit"]:hover {
     cursor: pointer;
     background-color: #3494E6;
+}
+
+.error {
+    background-color: lightcoral;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#resultado {
+    white-space: pre-wrap;
+    text-align: center;
+    padding:1rem;
+}
+
+.d-none {
+    display: none;
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
 }

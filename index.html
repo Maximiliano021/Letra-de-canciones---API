@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UFT-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Buscador de Letras</title>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
-        <link rel="stylesheet" href="style/main.css">
-    </head>
-    <body>
-        <main id="contenido" class="contenido">
-            <h1>Letra de canciones</h1>
-            <div class="contenedor">
-                <div id="buscar" class="buscar">
-                    <h2>Busqueda</h2>
-                    <p>Busca por Artista y Nombre: </p>
-                    <p><span>*</span>Obligatorio</p>
-                    <form action="#" id="formulario-buscar">
-                        <div class="input">
-                            <label for="artista">Artista: <span>*</span></label>
-                            <input type="text" id="artista" placeholder="Nombre Artista">
-                        </div>                        
-                        <div class="input">
-                            <label for="cancion">Cancion: <span>*</span></label>
-                            <input type="text" id="cancion" placeholder="Nombre de Cancion">
-                        </div>
-                        <div class="input enviar">
-                            <input type="submit" value="Buscar">
-                        </div>
-                    </form>
-                </div>
-                <div class="letra-resultado">
-                    <h2></h2>
-                    <div id="resultado"></div>
-                </div>
-                <div id="mensajes"></div>     
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Letras</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+    <main id="contenido" class="contenido">
+        <h1>LETRA DE CANCIONES</h1>
+        <div class="contenedor">
+            <div id="buscar" class="buscar">
+                <h2>Busqueda</h2>
+                <p>Busca por Artista y Nombre: </p>
+                <form action="#" id="formulario-buscar">
+                    <div class="input">
+                        <label for="artista">Artista: <span>*</span></label>
+                        <input type="text" id="artista" placeholder="Nombre Artista">
+                    </div>
+                    <div class="input">
+                        <label for="cancion">Cancion: <span>*</span></label>
+                        <input type="text" id="cancion" placeholder="Nombre de Cancion">
+                    </div>
+                    <div class="input enviar">
+                        <input type="submit" value="Buscar">
+                    </div>
+                </form>
             </div>
-        </main>
-        <script src="js/app.js" type="module"></script>
-    </body>
+            <div class="letra-resultado">
+                <div class="spinner">
+                    <img src="style/spinner.svg" class="d-none spinner-img">
+                </div>
+                <h2></h2>
+                <div id="resultado">
+                </div>
+            </div>
+            <div id="mensajes"></div>
+        </div>
+    </main>
+    <script src="js/app.js" type="module"></script>
+</body>
+
 </html>
