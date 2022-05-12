@@ -69,12 +69,12 @@ h2 {
 
 .input input[type="text"] {
     height: 2.5rem;
-    min-width: 20%;
     padding: 1rem;
     display: flex;
     flex: 1;
     border: solid 1px #3494E6;
     border-radius: 5px;
+    font-size: 19px;
 }
 
 .enviar {
