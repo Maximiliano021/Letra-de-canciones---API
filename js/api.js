@@ -10,6 +10,7 @@ class API {
         UI.divMensajes.textContent = '';
         UI.headingResultado.textContent = '';
         UI.spinner.classList.remove('d-none');
+        
 
         const url = `https://api.lyrics.ovh/v1/${this.artista}/${this.cancion}`;
         fetch(url)
@@ -17,12 +18,15 @@ class API {
             .then(resultado => {
                 UI.spinner.classList.add('d-none');
                 if (resultado.lyrics) {
+                    UI.formularioBuscar.reset();
+                    UI.botonSubir.classList.remove('d-none');
                     const { lyrics } = resultado;
                     UI.divMensajes.textContent = lyrics;
-                    UI.headingResultado.textContent = `Letra de la cancion: ${this.cancion} de ${this.artista}`;
+                    UI.headingResultado.textContent = `Letra de la cancion: ${this.artista} - ${this.cancion}`;
                 } else {
+                    UI.botonSubir.classList.add('d-none');
                     UI.headingResultado.textContent = '';
-                    UI.divMensajes.textContent = 'La cancion no existe, prueba con otra';
+                    UI.divMensajes.textContent = 'Letra no encontrada, prueba con otra cancion';
                     UI.divMensajes.classList.add('error');
                     setTimeout(() => {
                         UI.divMensajes.textContent = '';

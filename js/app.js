@@ -10,6 +10,7 @@ function buscarCancion(e) {
     const cancion = document.querySelector('#cancion').value;
 
     if (artista === '' || cancion === '') {
+        UI.botonSubir.classList.add('d-none');
         UI.headingResultado.textContent = '';
         UI.divMensajes.textContent = 'Error... Todos los campos son OBLIGATORIOS';
         UI.divMensajes.classList.add('error');
